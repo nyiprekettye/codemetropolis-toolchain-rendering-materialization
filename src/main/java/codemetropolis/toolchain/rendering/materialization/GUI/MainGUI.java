@@ -49,7 +49,7 @@ public class MainGUI extends JFrame {
 		tabbedPane.addTab(Labels.MainGUI_tabbetPane_fileTReading, new InputPanel(this));		
 		tabbedPane.addTab("Tree", makePanel("This is tab 1"));
 		tabbedPane.addTab("Tree", makePanel("This is tab 2"));
-		tabbedPane.addTab("KĂ©sz tree", makePanel("This is tab 2"));
+		tabbedPane.addTab("Teljes tree", makePanel("This is tab 2"));
 		tabbedPane.setEnabledAt(2, false);
 		
 		return tabbedPane;

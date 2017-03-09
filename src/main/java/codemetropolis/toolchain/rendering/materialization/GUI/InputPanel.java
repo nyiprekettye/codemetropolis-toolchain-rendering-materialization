@@ -9,12 +9,26 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.text.Document;
+import javax.xml.XMLConstants;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Source;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
+
+import org.xml.sax.SAXException;
 
 import codemetropolis.toolchain.rendering.materialization.GUI.view.Labels;
 
@@ -79,6 +93,66 @@ public class InputPanel extends JPanel implements ActionListener {
 				    System.out.println("Selected file: " + selectedFile.getAbsolutePath());
 				    inputFileLabel.setText(selectedFile.getAbsolutePath());
 				    startGenerate.setEnabled(true);
+				    
+				    
+				    
+				    
+/*
+
+				    // parse an XML document into a DOM tree
+				    DocumentBuilder parser = null;
+					try {
+						parser = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+					} catch (ParserConfigurationException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				    org.w3c.dom.Document document = null;
+					try {
+						document = parser.parse(inputFileLabel.getText());
+					} catch (SAXException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+
+				    // create a SchemaFactory capable of understanding WXS schemas
+				    SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+
+				    // load a WXS schema, represented by a Schema instance
+				    Source schemaFile = new StreamSource(new File("CodeMetropolis.xsd"));
+				    Schema schema = null;
+					try {
+						schema = factory.newSchema(schemaFile);
+					} catch (SAXException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+
+				    // create a Validator instance, which can be used to validate an instance document
+				    Validator validator = schema.newValidator();
+
+				    // validate the DOM tree
+				    try {
+				        validator.validate((Source) parser.parse(inputFileLabel.getText()));
+				        System.out.println("Valid xml");
+				    } catch (SAXException e) {
+				    	 System.out.println("Invalid xml");
+				        // instance document is invalid!
+				    	e.printStackTrace();
+				    } catch (IOException e) {
+				    	System.out.println("Invalid xml");
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+
+				    */
+				    
+				    
+				    
 				}else{
 					startGenerate.setEnabled(false);
 				}
