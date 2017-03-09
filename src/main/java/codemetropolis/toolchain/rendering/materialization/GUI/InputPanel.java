@@ -14,6 +14,7 @@ import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.Document;
@@ -62,7 +63,7 @@ public class InputPanel extends JPanel implements ActionListener {
 		c.gridx = 0;
 		c.gridy = 1;
 		
-		startGenerate.setEnabled(false);
+		//startGenerate.setEnabled(false);
 		
 		menuPanelInside.add(startGenerate, c);
 		add(menuPanelInside);
@@ -92,81 +93,53 @@ public class InputPanel extends JPanel implements ActionListener {
 				    File selectedFile = fileChooser.getSelectedFile();
 				    System.out.println("Selected file: " + selectedFile.getAbsolutePath());
 				    inputFileLabel.setText(selectedFile.getAbsolutePath());
-				    startGenerate.setEnabled(true);
-				    
-				    
-				    
-				    
-/*
-
-				    // parse an XML document into a DOM tree
-				    DocumentBuilder parser = null;
-					try {
-						parser = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-					} catch (ParserConfigurationException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-				    org.w3c.dom.Document document = null;
-					try {
-						document = parser.parse(inputFileLabel.getText());
-					} catch (SAXException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					} catch (IOException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-
-				    // create a SchemaFactory capable of understanding WXS schemas
-				    SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-
-				    // load a WXS schema, represented by a Schema instance
-				    Source schemaFile = new StreamSource(new File("CodeMetropolis.xsd"));
-				    Schema schema = null;
-					try {
-						schema = factory.newSchema(schemaFile);
-					} catch (SAXException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-
-				    // create a Validator instance, which can be used to validate an instance document
-				    Validator validator = schema.newValidator();
-
-				    // validate the DOM tree
-				    try {
-				        validator.validate((Source) parser.parse(inputFileLabel.getText()));
-				        System.out.println("Valid xml");
-				    } catch (SAXException e) {
-				    	 System.out.println("Invalid xml");
-				        // instance document is invalid!
-				    	e.printStackTrace();
-				    } catch (IOException e) {
-				    	System.out.println("Invalid xml");
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-
-
-				    */
-				    
-				    
+				    startGenerate.setEnabled(true);				    
 				    
 				}else{
 					startGenerate.setEnabled(false);
 				}
 	      } else  if (actionCommand.equals(Labels.InputPanel_button_startGenerate)) {	 
 	    	  
-	    	  try {
-	    		  
-	    	  }catch (Exception e){
-	    		  
-	    	  }
+	    	  boolean isValid = validateXMLSchema("CodeMetropolis.xsd",inputFileLabel.getText());
+	          
+	          if(isValid){
+	             System.out.println(" is valid xml " );
+	          } else {
+	             System.out.println( " is not valid xml " );
+	             JOptionPane.showMessageDialog(
+	                     mainGUI,
+	                     Labels.inputPanel_ERROR_NOT_VALID_XML,
+	                     Labels.inputPanel_ERROR_MessageDialog_TITLE,
+	                     JOptionPane.ERROR_MESSAGE);
+	             return;
+	          }
 	    	  
 	    	  mainGUI.getController().generateFromFile(inputFileLabel.getText());
 	      }
 		
 	}
 
+
+	   public static boolean validateXMLSchema(String xsdPath, String xmlPath){
+	      try {
+	         SchemaFactory factory =
+	            SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+	            Schema schema = factory.newSchema(new File(xsdPath));
+	            Validator validator = schema.newValidator();
+	            validator.validate(new StreamSource(new File(xmlPath)));
+	      } catch (IOException e){
+	         System.out.println("Exception: "+e.getMessage());
+	         //e.printStackTrace();
+	         return false;
+	      }catch(SAXException e1){
+	         System.out.println("SAX Exception: "+e1.getMessage());
+	         //e1.printStackTrace();
+	         return false;
+	      }
+			
+	      return true;
+		
+	   }
+	   
+	   
 }

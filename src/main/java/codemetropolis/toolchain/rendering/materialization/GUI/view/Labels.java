@@ -19,5 +19,9 @@ public class Labels {
 
 	public static final String InputPanel_button_startGenerate = "Generálás";
 
-	public static final String InputPanel_JFileChooser = "Fál választása"; 
+	public static final String InputPanel_JFileChooser = "Fál választása";
+
+	public static final String inputPanel_ERROR_NOT_VALID_XML ="Érvénytelen xml fálj! Kérlek a megfelelőt töltsd be! ";
+
+	public static String inputPanel_ERROR_MessageDialog_TITLE = "HIBA"; 
 }

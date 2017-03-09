@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<buildables from="placing" to="rendering" version="1.0">
+    <buildable id="4a8c9b17-6cd7-4fef-91f8-9d62d7519562" name="" type="container">
+        <position x="0" y="60" z="0"/>
+        <size x="111" y="9" z="108"/>
+        <attributes/>
+        <children>
+            <buildable id="42b04c98-7698-4447-87ff-685d2a8157d3" name="&lt;root_package&gt;" type="ground">
+                <position x="3" y="61" z="3"/>
+                <size x="105" y="9" z="102"/>
+                <attributes/>
+                <children>
+                    <buildable id="76f8e5e8-bfe9-486b-9435-1e05bcf43349" name="Main" type="ground">
+                        <position x="6" y="62" z="6"/>
+                        <size x="99" y="9" z="96"/>
+                        <attributes/>
+                        <children>
+                            <buildable id="fe04d6af-908a-4bca-bd7c-413f897ff912" name="Candy" type="garden">
+                                <position x="9" y="63" z="57"/>
+                                <size x="21" y="9" z="32"/>
+                                <attributes>
+                                    <attribute name="flower-ratio" value="0.2"/>
+                                </attributes>
+                                <children>
+                                    <buildable id="0c48375e-0767-4801-bca0-845b2cc62ca2" name="szin" type="cellar">
+                                        <position x="15" y="24" z="60"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="39895d1f-9d5c-4101-9dc4-d2d44ae78e08" name="fajta" type="cellar">
+                                        <position x="15" y="34" z="60"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="56fb3ecf-790d-4cb4-a798-1edc94f0d286" name="eatThat" type="cellar">
+                                        <position x="15" y="44" z="60"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="08da9832-ba2f-41a1-b905-66894ce5be27" name="NewThat" type="cellar">
+                                        <position x="15" y="54" z="60"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="45d4a041-db7c-4fbb-b3fb-64700ed64c5c" name="Candy()" type="floor">
+                                        <position x="14" y="183" z="60"/>
+                                        <size x="11" y="13" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="3c75b7ac-08d0-437b-8b92-7cd242e98128" name="void setFajta(int fajta)" type="floor">
+                                        <position x="14" y="170" z="60"/>
+                                        <size x="11" y="13" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="eba201ce-aa10-48f7-b5c2-d50af994ba6c" name="void setFajtaRandom()" type="floor">
+                                        <position x="12" y="77" z="75"/>
+                                        <size x="13" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="5d696400-3ccd-4fa7-83f4-2ae85dab16c9" name="int getfajta()" type="floor">
+                                        <position x="12" y="64" z="60"/>
+                                        <size x="15" y="13" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="9fd07046-c388-4a0b-b147-eb62789bfbbf" name="void setSzin(int szin)" type="floor">
+                                        <position x="14" y="157" z="60"/>
+                                        <size x="11" y="13" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="57743232-578a-4190-8c56-39f1f147e433" name="void setSzinRandom()" type="floor">
+                                        <position x="12" y="64" z="75"/>
+                                        <size x="13" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="c2f84cd8-92ee-415c-a777-28f09effcc21" name="int getSzin()" type="floor">
+                                        <position x="13" y="105" z="60"/>
+                                        <size x="13" y="13" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="4c295c17-6021-49c2-a19d-cc89f9486080" name="void setEatThat(Boolean set)" type="floor">
+                                        <position x="13" y="92" z="60"/>
+                                        <size x="13" y="13" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="b6f45b86-2f83-471e-b59b-d73b22a47461" name="Boolean getEatThat()" type="floor">
+                                        <position x="14" y="144" z="60"/>
+                                        <size x="11" y="13" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="4bcbf232-4eaa-4c60-8770-25b4dedab829" name="void setNewThat(Boolean set)" type="floor">
+                                        <position x="14" y="131" z="60"/>
+                                        <size x="11" y="13" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="24d27190-71bd-4c98-86d5-e77cd55982ad" name="Boolean getNewThat()" type="floor">
+                                        <position x="14" y="118" z="60"/>
+                                        <size x="11" y="13" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="eb57f311-cedd-42d5-92e8-49b020e92809" name="void setNull()" type="floor">
+                                        <position x="13" y="77" z="60"/>
+                                        <size x="13" y="15" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                </children>
+                            </buildable>
+                            <buildable id="b3767eaf-a6ba-470e-a455-9e7617b9dba2" name="CandyCanEat" type="garden">
+                                <position x="66" y="63" z="9"/>
+                                <size x="36" y="9" z="36"/>
+                                <attributes>
+                                    <attribute name="flower-ratio" value="0.4"/>
+                                </attributes>
+                                <children>
+                                    <buildable id="2e3918ad-a8c2-4a5c-9a51-20689224c0a5" name="void CandyCsere(int X, int Y, int mozgasMelyik)" type="floor">
+                                        <position x="70" y="140" z="12"/>
+                                        <size x="11" y="27" z="13"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="3"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="2816d495-1e7f-4120-ad46-e48e98b5a363" name="Boolean Candycaneat()" type="floor">
+                                        <position x="88" y="64" z="12"/>
+                                        <size x="11" y="51" z="15"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="084b021c-2ed0-4cc2-9c49-9a2ba25a2ab2" name="void CsereAlatta(int x, int y)" type="floor">
+                                        <position x="69" y="121" z="12"/>
+                                        <size x="13" y="19" z="13"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="34698775-4673-4e04-a490-3630d97d0702" name="void CsereFelette(int x, int y)" type="floor">
+                                        <position x="69" y="102" z="12"/>
+                                        <size x="13" y="19" z="13"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="174136ed-7575-423c-92a6-4874cff129f6" name="void CsereBal(int x, int y)" type="floor">
+                                        <position x="69" y="83" z="12"/>
+                                        <size x="13" y="19" z="13"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="75f48c06-68ae-4a92-b06d-d1ceeeeb7a66" name="void CsereJobb(int x, int y)" type="floor">
+                                        <position x="69" y="64" z="12"/>
+                                        <size x="13" y="19" z="13"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="cdefb71e-4df1-47c5-a2bc-d8fbe3282b6b" name="boolean Vizsgalat(int x, int y)" type="floor">
+                                        <position x="69" y="64" z="31"/>
+                                        <size x="11" y="43" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="d94ecfa8-b730-4633-a96c-f67e9242be24" name="boolean CandyEatVizsgalatFuggoleges(int x, int y)" type="floor">
+                                        <position x="88" y="167" z="14"/>
+                                        <size x="11" y="27" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="sand"/>
+                                            <attribute name="external_character" value="sandstone"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="0fe91d39-eaf8-47a3-a874-049c21efa3b3" name="boolean CandyEatVizsgalatVizszintes(int x, int y)" type="floor">
+                                        <position x="88" y="138" z="14"/>
+                                        <size x="11" y="29" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="sand"/>
+                                            <attribute name="external_character" value="sandstone"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="635f222c-453d-4760-a7d7-c09b68fd9b09" name="void CandyEatFuggoleges(int x, int y)" type="floor">
+                                        <position x="88" y="115" z="14"/>
+                                        <size x="11" y="23" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="fc534680-b525-4c7d-bc34-03d60d6f2470" name="void CandyEatVizszintes(int x, int y)" type="floor">
+                                        <position x="70" y="167" z="13"/>
+                                        <size x="11" y="25" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                </children>
+                            </buildable>
+                            <buildable id="6b0f0a80-9642-4e63-9bbf-667eb17dfcbb" name="CandyFajta" type="garden">
+                                <position x="82" y="63" z="57"/>
+                                <size x="17" y="9" z="21"/>
+                                <attributes>
+                                    <attribute name="flower-ratio" value="0.4"/>
+                                </attributes>
+                                <children>
+                                    <buildable id="6b47b389-c419-4215-a54a-4c622682f580" name="Areax" type="cellar">
+                                        <position x="86" y="44" z="63"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="21850c25-58eb-4b4b-8e5b-6b88f5e83a20" name="Areay" type="cellar">
+                                        <position x="86" y="54" z="63"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="f6f078f5-e2c9-45df-ab74-a0eaef96e585" name="void CandyFajtaVizsgalat()" type="floor">
+                                        <position x="85" y="64" z="60"/>
+                                        <size x="11" y="33" z="15"/>
+                                        <attributes>
+                                            <attribute name="character" value="sand"/>
+                                            <attribute name="external_character" value="sandstone"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="ccce6f9f-4d69-448a-aa7e-b492be36c780" name="boolean EatCandyVizszint(int x, int y)" type="floor">
+                                        <position x="85" y="177" z="62"/>
+                                        <size x="11" y="19" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="875aecdf-bcc0-4fc2-96fd-b3305c605a9c" name="boolean EatCandyFuggoleges(int x, int y)" type="floor">
+                                        <position x="85" y="158" z="62"/>
+                                        <size x="11" y="19" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="458b1f54-9f28-46f3-bb3c-476f827cb613" name="boolean EatCandySzomszedos(int x, int y)" type="floor">
+                                        <position x="85" y="97" z="62"/>
+                                        <size x="11" y="61" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="obsidian"/>
+                                            <attribute name="external_character" value="obsidian"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                </children>
+                            </buildable>
+                            <buildable id="03381c9b-5e20-4413-96fa-1ea6d0adb0e3" name="CandyReloadsObject" type="garden">
+                                <position x="59" y="63" z="57"/>
+                                <size x="17" y="9" z="21"/>
+                                <attributes>
+                                    <attribute name="flower-ratio" value="0.4"/>
+                                </attributes>
+                                <children>
+                                    <buildable id="a1e36fa5-50f4-4b9b-900a-bca464db2140" name="AreaX" type="cellar">
+                                        <position x="63" y="44" z="63"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="5d92a7bd-196f-4889-b84c-a830593bda00" name="AreaY" type="cellar">
+                                        <position x="63" y="54" z="63"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="e2ec5d88-d34c-4c98-be79-fdc124b211c7" name="CandyReloadsObject(int areax, int areay)" type="floor">
+                                        <position x="62" y="93" z="63"/>
+                                        <size x="11" y="13" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="5be4c998-ad57-451b-830f-cce1e74aecd1" name="void CandyDown()" type="floor">
+                                        <position x="62" y="64" z="60"/>
+                                        <size x="11" y="29" z="15"/>
+                                        <attributes>
+                                            <attribute name="character" value="sand"/>
+                                            <attribute name="external_character" value="sandstone"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                </children>
+                            </buildable>
+                            <buildable id="5267cb5e-1cea-4c1f-b224-44c7c014762b" name="Game" type="garden">
+                                <position x="9" y="63" z="9"/>
+                                <size x="51" y="9" z="42"/>
+                                <attributes>
+                                    <attribute name="flower-ratio" value="1.0"/>
+                                </attributes>
+                                <children>
+                                    <buildable id="f6a62cd1-8e64-4e5a-971a-e5796837442d" name="candy" type="cellar">
+                                        <position x="13" y="14" z="34"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="0aa87baf-6ccb-462e-bfef-a2be29e74a3f" name="AreaX" type="cellar">
+                                        <position x="13" y="24" z="34"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="d922c652-0751-452f-844c-fbcf0fcb43d3" name="AreaY" type="cellar">
+                                        <position x="13" y="34" z="34"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="9d958bf9-16dc-4615-a169-c7a0b7ebbdcf" name="pontszam" type="cellar">
+                                        <position x="13" y="44" z="34"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="eead05ae-48d1-4678-a47e-c9d62fe645aa" name="Move" type="cellar">
+                                        <position x="13" y="54" z="34"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="9f47ba61-04bd-485e-a188-027ed4646d3e" name="CanMove" type="cellar">
+                                        <position x="17" y="14" z="13"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="c106f42c-6624-445b-b254-c702c20fb0fe" name="MozgasX" type="cellar">
+                                        <position x="17" y="24" z="13"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="303cd040-b850-4cbf-a3af-bf180c637f0b" name="MozgasY" type="cellar">
+                                        <position x="17" y="34" z="13"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="8d789846-f7e0-47a8-af93-0bc74a8ae05d" name="MozgasMelyik" type="cellar">
+                                        <position x="17" y="44" z="13"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="db0bef9f-a95d-4c89-bcd7-6adb0084a326" name="level" type="cellar">
+                                        <position x="17" y="54" z="13"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="1e76a8c1-a0cb-4a78-a0d7-10c4a9f443fe" name="void setFajta(int X, int Y, int fajta)" type="floor">
+                                        <position x="14" y="116" z="12"/>
+                                        <size x="15" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="3"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="936ea17c-8aa7-4d74-9994-cd4d7bcfe642" name="void setFajtaRandom(int X, int Y)" type="floor">
+                                        <position x="38" y="158" z="12"/>
+                                        <size x="9" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="4b2f19f1-4727-4050-be41-6d72be8dc60d" name="int getfajta(int X, int Y)" type="floor">
+                                        <position x="14" y="103" z="12"/>
+                                        <size x="15" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="9b7fcd4b-f518-4cc9-b727-b59b373f2e1f" name="void setSzin(int X, int Y, int szin)" type="floor">
+                                        <position x="14" y="90" z="12"/>
+                                        <size x="15" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="3"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="604d35d2-2b49-4c12-bea6-04bf34794e31" name="void setSzinRandom(int X, int Y)" type="floor">
+                                        <position x="38" y="145" z="12"/>
+                                        <size x="9" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="4d9f64f8-5ffb-45c6-a960-9d22762ee617" name="int getSzin(int X, int Y)" type="floor">
+                                        <position x="12" y="64" z="12"/>
+                                        <size x="19" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="99722b80-8d98-4337-90d5-d6036d8002a7" name="void setEatThat(int X, int Y, Boolean set)" type="floor">
+                                        <position x="14" y="77" z="12"/>
+                                        <size x="15" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="3"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="beab73a1-a206-4d61-a2fe-a720197d70f2" name="Boolean getEatThat(int X, int Y)" type="floor">
+                                        <position x="15" y="180" z="12"/>
+                                        <size x="13" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="ea06f4cd-10d7-4c84-9f0e-6435bdb56ed8" name="void setNewThat(int X, int Y, Boolean set)" type="floor">
+                                        <position x="46" y="154" z="30"/>
+                                        <size x="11" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="3"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="d32d9e5b-5a28-4c18-83da-027abae30a19" name="Boolean getNewThat(int X, int Y)" type="floor">
+                                        <position x="46" y="141" z="30"/>
+                                        <size x="11" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="1c96c41b-6520-450f-8255-0f706509e456" name="void setNull(int X, int Y)" type="floor">
+                                        <position x="46" y="128" z="30"/>
+                                        <size x="11" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="df82cf47-35d3-4196-99e1-d23e29086735" name="void setNewGameVariables(int areaX, int areaY, int level, int move)" type="floor">
+                                        <position x="46" y="184" z="31"/>
+                                        <size x="11" y="15" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="3"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="852e7814-9b92-4c89-aad5-b744f0cfa825" name="void Start()" type="floor">
+                                        <position x="12" y="107" z="29"/>
+                                        <size x="11" y="31" z="19"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="11422200-8d5a-46ab-bb62-762b886af7c2" name="void CandyReloadsObject()" type="floor">
+                                        <position x="12" y="64" z="29"/>
+                                        <size x="11" y="43" z="19"/>
+                                        <attributes>
+                                            <attribute name="character" value="sand"/>
+                                            <attribute name="external_character" value="sandstone"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="23cc8f93-fed9-4dcd-9b47-27e6f5d6e0dd" name="void CandyEat()" type="floor">
+                                        <position x="29" y="64" z="29"/>
+                                        <size x="11" y="33" z="15"/>
+                                        <attributes>
+                                            <attribute name="character" value="sand"/>
+                                            <attribute name="external_character" value="sandstone"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="82de0c8c-7488-40f0-b4d6-687ea7a2c2a9" name="void CandyEatVizsgalat()" type="floor">
+                                        <position x="46" y="64" z="29"/>
+                                        <size x="11" y="49" z="13"/>
+                                        <attributes>
+                                            <attribute name="character" value="sand"/>
+                                            <attribute name="external_character" value="sandstone"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="5c9a5ee4-12b4-41df-bb41-c29beda8033d" name="void CandyMoveWrite()" type="floor">
+                                        <position x="12" y="138" z="31"/>
+                                        <size x="11" y="55" z="15"/>
+                                        <attributes>
+                                            <attribute name="character" value="sand"/>
+                                            <attribute name="external_character" value="sandstone"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="5d6b3f8e-601a-4d05-9046-842b93428a8a" name="void CandyAskMove()" type="floor">
+                                        <position x="37" y="64" z="12"/>
+                                        <size x="11" y="81" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="obsidian"/>
+                                            <attribute name="external_character" value="obsidian"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="79b9d33c-384e-4365-bb35-85ca6645d32d" name="void CandyCsere()" type="floor">
+                                        <position x="29" y="137" z="30"/>
+                                        <size x="11" y="23" z="13"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="555ec0d6-ce5c-4902-8927-3bb817284f29" name="void CandyFeltoltes()" type="floor">
+                                        <position x="46" y="113" z="30"/>
+                                        <size x="11" y="15" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="6c00412a-ec62-4347-98ca-0b47df962773" name="void CandyCreate()" type="floor">
+                                        <position x="29" y="173" z="31"/>
+                                        <size x="11" y="17" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="7323dc85-db67-4846-9149-1140ace4d2b7" name="void CandyNull()" type="floor">
+                                        <position x="46" y="167" z="31"/>
+                                        <size x="11" y="17" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="3c329d99-533b-4e91-ac45-628f24173a6a" name="void CandyFullNewVariables()" type="floor">
+                                        <position x="29" y="118" z="30"/>
+                                        <size x="11" y="19" z="13"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="cee7a4c9-4d27-499d-b8d6-28168b2f9115" name="void CandySetToNullObjectum()" type="floor">
+                                        <position x="29" y="97" z="30"/>
+                                        <size x="11" y="21" z="13"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="fd994609-5592-4fdd-9372-c6b80fe61214" name="void CandyCreateNewVariables(int X, int Y)" type="floor">
+                                        <position x="29" y="160" z="31"/>
+                                        <size x="11" y="13" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="2"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="e0324f3d-d3b1-4a6c-91db-72a71dc17475" name="void CandyWrite()" type="floor">
+                                        <position x="15" y="129" z="12"/>
+                                        <size x="13" y="51" z="11"/>
+                                        <attributes>
+                                            <attribute name="character" value="sand"/>
+                                            <attribute name="external_character" value="sandstone"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                </children>
+                            </buildable>
+                            <buildable id="ba2de450-f8d3-4ea4-9679-4fb603c9b625" name="Main" type="garden">
+                                <position x="36" y="63" z="57"/>
+                                <size x="17" y="9" z="36"/>
+                                <attributes>
+                                    <attribute name="flower-ratio" value="0.2"/>
+                                </attributes>
+                                <children>
+                                    <buildable id="0fe1b6b3-f817-425b-a820-62630cc403c3" name="AreaX" type="cellar">
+                                        <position x="40" y="14" z="60"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="1efabd22-bd41-48bf-bab1-9c424c208a49" name="AreaY" type="cellar">
+                                        <position x="40" y="24" z="60"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="b30a83b0-3101-4caa-9420-51da8c58d9d0" name="level" type="cellar">
+                                        <position x="40" y="34" z="60"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="fba04136-b134-4d58-8237-f2fc62a138d8" name="move" type="cellar">
+                                        <position x="40" y="44" z="60"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="f4750a9c-9182-452a-a040-28676947ca4a" name="game" type="cellar">
+                                        <position x="40" y="54" z="60"/>
+                                        <size x="9" y="9" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="d56bb7c5-a900-4771-ba30-a97396c1de0e" name="void main(String[] args)" type="floor">
+                                        <position x="39" y="64" z="75"/>
+                                        <size x="9" y="21" z="15"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="2a121660-84ff-4933-a69f-9058e7015e23" name="Boolean AskToNewGame()" type="floor">
+                                        <position x="39" y="148" z="60"/>
+                                        <size x="11" y="35" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="sand"/>
+                                            <attribute name="external_character" value="sandstone"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="2596240f-d172-4914-afb1-1de5b237bdc4" name="void SetMove()" type="floor">
+                                        <position x="39" y="127" z="60"/>
+                                        <size x="11" y="21" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="48a9f2c9-42a1-4f77-9ceb-aa00b9fc0730" name="void ProbaVariable()" type="floor">
+                                        <position x="40" y="183" z="60"/>
+                                        <size x="9" y="15" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="a095ed69-3bb4-491c-82dd-0656134fc36b" name="void AskNewGameData()" type="floor">
+                                        <position x="39" y="64" z="60"/>
+                                        <size x="11" y="63" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="planks"/>
+                                            <attribute name="external_character" value="wood"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                </children>
+                            </buildable>
+                            <buildable id="50f2bcbc-2dc2-423e-b8b2-73d998f29127" name="NewValues" type="garden">
+                                <position x="59" y="63" z="84"/>
+                                <size x="17" y="9" z="15"/>
+                                <attributes>
+                                    <attribute name="flower-ratio" value="0.0"/>
+                                </attributes>
+                                <children>
+                                    <buildable id="298e72c5-14c1-44f8-9ba4-8ba2f9d62473" name="int RandomSzin()" type="floor">
+                                        <position x="62" y="89" z="87"/>
+                                        <size x="11" y="17" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                    <buildable id="383144ae-4992-4a82-be2f-15f3dd9a40f0" name="int RandomFajta()" type="floor">
+                                        <position x="62" y="64" z="87"/>
+                                        <size x="11" y="25" z="9"/>
+                                        <attributes>
+                                            <attribute name="character" value="glass"/>
+                                            <attribute name="external_character" value="metal"/>
+                                            <attribute name="torches" value="1"/>
+                                        </attributes>
+                                        <children/>
+                                    </buildable>
+                                </children>
+                            </buildable>
+                        </children>
+                    </buildable>
+                </children>
+            </buildable>
+        </children>
+    </buildable>
+</buildables>
