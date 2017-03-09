@@ -9,5 +9,9 @@ public class Controller {
 		 MainGUI mainGUI = new MainGUI();
 		mainGUI.startGUI(con);
 	}
+	public void generateFromFile(String text) {
+		System.out.println("Ezt a fáljt kaptam: " + text);
+		
+	}
 
 }
