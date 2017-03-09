@@ -9,5 +9,9 @@ public class Controller {
 		 MainGUI mainGUI = new MainGUI();
 		mainGUI.startGUI(con);
 	}
+	public void generateFromFile(String text) {
+		System.out.println("Ezzel a paraméterrel indul a generálás!" + text);
+		
+	}
 
 }
