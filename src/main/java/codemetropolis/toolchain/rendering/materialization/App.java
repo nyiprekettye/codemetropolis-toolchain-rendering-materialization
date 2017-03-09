@@ -1,6 +1,5 @@
 package codemetropolis.toolchain.rendering.materialization;
 
-import codemetropolis.toolchain.rendering.materialization.GUI.MainGUI;
 import codemetropolis.toolchain.rendering.materialization.controller.Controller;
 
 /**
