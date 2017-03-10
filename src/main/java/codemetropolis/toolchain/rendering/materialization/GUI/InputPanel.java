@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.io.StringReader;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -18,6 +19,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.Document;
+import javax.swing.tree.DefaultMutableTreeNode;
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -29,6 +31,7 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 
+import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import codemetropolis.toolchain.rendering.materialization.GUI.view.Labels;
@@ -104,6 +107,12 @@ public class InputPanel extends JPanel implements ActionListener {
 	          
 	          if(isValid){
 	             System.out.println(" is valid xml " );
+	            // Feri Graph tesztje. Egyenlore konsolra irja ki az xml adatait. 
+	          XmlToJGraph b = new XmlToJGraph();
+	          b.read(inputFileLabel.getText());
+	             
+	             
+	             
 	          } else {
 	             System.out.println( " is not valid xml " );
 	             JOptionPane.showMessageDialog(
