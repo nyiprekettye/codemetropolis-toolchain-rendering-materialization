@@ -106,15 +106,9 @@ public class InputPanel extends JPanel implements ActionListener {
 	    	  boolean isValid = validateXMLSchema("CodeMetropolis.xsd",inputFileLabel.getText());
 	          
 	          if(isValid){
-	             System.out.println(" is valid xml " );
-	            // Feri Graph tesztje. Egyenlore konsolra irja ki az xml adatait. 
-	          XmlToJGraph b = new XmlToJGraph();
-	          b.read(inputFileLabel.getText());
-	             
-	             
-	             
+	             System.out.println("is valid xml " );             
 	          } else {
-	             System.out.println( " is not valid xml " );
+	             System.out.println( "ERROR - is not valid xml " );
 	             JOptionPane.showMessageDialog(
 	                     mainGUI,
 	                     Labels.inputPanel_ERROR_NOT_VALID_XML,

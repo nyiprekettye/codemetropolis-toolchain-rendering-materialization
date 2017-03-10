@@ -17,7 +17,7 @@ public class Labels {
 
 	public static final String MainGUI_JPanel_consolePanel_Tips = "Konzol, a program kimeneti helye";
 
-	public static final String InputPanel_button_startGenerate = "Generálás";
+	public static final String InputPanel_button_startGenerate = "Ellenőrzés és Generálás";
 
 	public static final String InputPanel_JFileChooser = "Fál választása";
 
