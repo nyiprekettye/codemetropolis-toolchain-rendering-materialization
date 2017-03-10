@@ -1,6 +1,6 @@
 package codemetropolis.toolchain.rendering.materialization.GUI.view;
 
-import javax.swing.Icon;
+
 
 public class Labels {
 	public static final String MainGUI_Ttitle = "Materializáló program";
@@ -23,5 +23,7 @@ public class Labels {
 
 	public static final String inputPanel_ERROR_NOT_VALID_XML ="Érvénytelen xml fálj! Kérlek a megfelelőt töltsd be! ";
 
-	public static String inputPanel_ERROR_MessageDialog_TITLE = "HIBA"; 
+	public static final String inputPanel_ERROR_MessageDialog_TITLE = "HIBA";
+
+	public static final String InputPanle_label_inputFile_Exception = "Esetleges hiba kiírása a consolra"; 
 }

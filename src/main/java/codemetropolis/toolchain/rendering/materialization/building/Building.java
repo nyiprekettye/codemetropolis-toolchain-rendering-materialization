@@ -64,7 +64,7 @@ public class Building {
 	}
 	@Override
 	public String toString() {
-		return "Building [name=" + name + ", id=" + id + ", type=" + type + ", parent_id=" + parent_id
+		return "Building: [type=" + type  +", id=" + id + ", parent_id=" + parent_id + ", name=" + name 
 				+ ", parent_name=" + parent_name + ", location=" + location.toString() + ", size=" + size.toString() + "]";
 	}
 }
