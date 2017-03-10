@@ -17,11 +17,11 @@ import org.w3c.dom.Node;
 
 	public class XmlToJGraph {
 		
-		private String filename;
+	private String filename;
 		
-	  public void read(String filename) {
+	public void read(String filename) {
 		  
-			JFrame frame = new JFrame("GraphTreeModel");
+		JFrame frame = new JFrame("GraphTreeModel");
 			//JGraph graph = new JGraph();
 			//GraphTreeModel gtModel = new GraphTreeModel(graph.getModel());
 			//JTree tree = new JTree(gtModel);
