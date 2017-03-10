@@ -24,11 +24,17 @@ public class MainGUI extends JFrame {
 	Button startGenerateBtn = new Button(Labels.MainGUI_button_startGenerateBtn);
 	JTextArea console;
 	JTabbedPane tabbedPane;
+	GraphicsPanel graphicsPanel;
 	
 	public MainGUI(Controller con) {
 		this.con = con;
+		graphicsPanel = new GraphicsPanel(this);
 	}
-
+	
+	public GraphicsPanel getGraphicsPanel() {
+		return graphicsPanel;
+	}
+	
 	public void startGUI() {		
 		setTitle(Labels.MainGUI_Ttitle);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -39,18 +45,16 @@ public class MainGUI extends JFrame {
 		add(tabbedPane, BorderLayout.CENTER);
 		
 		JPanel consolePanel = makeConole();
-		add(consolePanel, BorderLayout.SOUTH);
-
+		add(consolePanel, BorderLayout.SOUTH);	
 		
-		setVisible(true);
-		
+		setVisible(true);		
 	}
 	
 	private JTabbedPane makeMenuTabbetPane() {
 		tabbedPane = new JTabbedPane();
 		//ImageIcon icon = createImageIcon("images/middle.gif");
 		tabbedPane.addTab(Labels.MainGUI_tabbetPane_fileTReading, new InputPanel(this));
-		tabbedPane.addTab(Labels.MainGUI_tabbetPane_graphicsPanel, new GraphicsPanel(this));		
+		tabbedPane.addTab(Labels.MainGUI_tabbetPane_graphicsPanel,graphicsPanel);		
 		tabbedPane.addTab("Tree", makePanel("This is tab 1"));
 		tabbedPane.addTab("Tree", makePanel("This is tab 2"));
 		tabbedPane.addTab("Teljes tree", makePanel("This is tab 2"));

@@ -1,27 +1,21 @@
 package codemetropolis.toolchain.rendering.materialization.GUI;
 
-
-	import javax.xml.parsers.DocumentBuilderFactory;
-import javax.swing.JFrame;
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
-
-
 import org.w3c.dom.Document;
-	import org.w3c.dom.NodeList;
-
+import org.w3c.dom.NodeList;
 import codemetropolis.toolchain.rendering.materialization.building.Building;
-
 import org.w3c.dom.Node;
-	import org.w3c.dom.Element;
-	import java.io.File;
+import org.w3c.dom.Element;
+import java.io.File;
 
-	public class XmlToJGraph {
+public class XmlToJGraph {
 		
 	private String filename;
 		
 	public void read(String filename) {
 		  
-		JFrame frame = new JFrame("GraphTreeModel");
+		//JFrame frame = new JFrame("GraphTreeModel");
 			//JGraph graph = new JGraph();
 			//GraphTreeModel gtModel = new GraphTreeModel(graph.getModel());
 			//JTree tree = new JTree(gtModel);
@@ -32,9 +26,9 @@ import org.w3c.dom.Node;
 			//JSplitPane pane =
 			//	new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, sTree, sGraph);
 			//frame.getContentPane().add(pane);
-			frame.pack();
+			//frame.pack();
 			//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			frame.setVisible(true);
+			//frame.setVisible(true);
 	    try {
 
 		File fXmlFile = new File(filename);

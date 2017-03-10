@@ -27,5 +27,9 @@ public class Labels {
 
 	public static final String InputPanle_label_inputFile_Exception = "Esetleges hiba kiírása a consolra";
 
-	public static final String MainGUI_tabbetPane_graphicsPanel = "Grafikus megjelenítés"; 
+	public static final String MainGUI_tabbetPane_graphicsPanel = "Grafikus megjelenítés";
+
+	public static final String CONTROLLER_SUCCCES_XML_PROCESSING_MESSAGE = "Sikeresen feldolgoztam a beolvasott xml fáljt!";
+
+	public static final String CONTROLLER_SUCCCES_XML_PROCESSING_TITLE = "Sikeres feldolgozás!"; 
 }

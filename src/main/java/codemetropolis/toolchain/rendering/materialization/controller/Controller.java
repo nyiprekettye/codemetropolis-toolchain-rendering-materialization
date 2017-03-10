@@ -1,11 +1,15 @@
 package codemetropolis.toolchain.rendering.materialization.controller;
 
+import javax.swing.JOptionPane;
+
 import codemetropolis.toolchain.rendering.materialization.GUI.MainGUI;
 import codemetropolis.toolchain.rendering.materialization.GUI.XmlToJGraph;
+import codemetropolis.toolchain.rendering.materialization.GUI.view.Labels;
 
 public class Controller {
 	Controller con;
 	MainGUI mainGUI;
+	
 	public void start(Controller con) {
 		 this.con =con;
 		 this.mainGUI = new MainGUI(con);
@@ -20,7 +24,13 @@ public class Controller {
         /*
          * ha sikeres volt a beolvasás akkor a grafikus felületet aktiválni kell
          */
+        JOptionPane.showMessageDialog(
+                mainGUI,
+                Labels.CONTROLLER_SUCCCES_XML_PROCESSING_MESSAGE,
+                Labels.CONTROLLER_SUCCCES_XML_PROCESSING_TITLE,
+                JOptionPane.INFORMATION_MESSAGE);
         mainGUI.setVisibleTabletGraphicsPanel();
+        
 	}
 
 }
