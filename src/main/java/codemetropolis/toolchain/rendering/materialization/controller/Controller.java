@@ -18,18 +18,26 @@ public class Controller {
 	public void generateFromFile(String inputXML) {
 		System.out.println("Ezt a fáljt kaptam: " + inputXML);
 		   // Feri Graph tesztje. Egyenlore konsolra irja ki az xml adatait. 
-        XmlToJGraph b = new XmlToJGraph();
-        b.read(inputXML);
+       // XmlToJGraph b = new XmlToJGraph();
+        //b.read(inputXML);
         
-        /*
-         * ha sikeres volt a beolvasás akkor a grafikus felületet aktiválni kell
-         */
-        JOptionPane.showMessageDialog(
-                mainGUI,
-                Labels.CONTROLLER_SUCCCES_XML_PROCESSING_MESSAGE,
-                Labels.CONTROLLER_SUCCCES_XML_PROCESSING_TITLE,
-                JOptionPane.INFORMATION_MESSAGE);
-        mainGUI.setVisibleTabletGraphicsPanel();
+        XmlProcessing xmlprocessing= new XmlProcessing(inputXML);
+        if(xmlprocessing.xmlProcessingAndBuildingsGeneration()) { 
+        	JOptionPane.showMessageDialog(
+                    mainGUI,
+                    Labels.CONTROLLER_SUCCCES_XML_PROCESSING_MESSAGE,
+                    Labels.CONTROLLER_SUCCCES_XML_PROCESSING_TITLE,
+                    JOptionPane.INFORMATION_MESSAGE);
+            mainGUI.setVisibleTabletGraphicsPanel();
+        } else {
+        	JOptionPane.showMessageDialog(
+                    mainGUI,
+                    Labels.CONTROLLER_UNSUCCESSFUL_XML_PROCESSING_MESSAGE + "\n" + Labels.CONTROLLER_UNSUCCESSFUL_XML_PROCESSING_MESSAGE_SUGGESTION,
+                    Labels.CONTROLLER_UNSUCCESSFUL_XML_PROCESSING_TITLE,
+                    JOptionPane.ERROR_MESSAGE);          
+        }
+        	
+       
         
 	}
 

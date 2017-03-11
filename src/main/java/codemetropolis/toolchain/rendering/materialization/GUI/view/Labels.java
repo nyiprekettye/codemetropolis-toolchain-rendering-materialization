@@ -31,5 +31,11 @@ public class Labels {
 
 	public static final String CONTROLLER_SUCCCES_XML_PROCESSING_MESSAGE = "Sikeresen feldolgoztam a beolvasott xml fáljt!";
 
-	public static final String CONTROLLER_SUCCCES_XML_PROCESSING_TITLE = "Sikeres feldolgozás!"; 
+	public static final String CONTROLLER_SUCCCES_XML_PROCESSING_TITLE = "Sikeres feldolgozás!";
+
+	public static final String CONTROLLER_UNSUCCESSFUL_XML_PROCESSING_MESSAGE = "Valami hiba történt a feldolgozás köben!";
+
+	public static final String CONTROLLER_UNSUCCESSFUL_XML_PROCESSING_MESSAGE_SUGGESTION = "Esetleg próbálj megnyitni egy másik xml-t"; 
+
+	public static final String CONTROLLER_UNSUCCESSFUL_XML_PROCESSING_TITLE = "Sikertelen feldolgozás!";
 }
