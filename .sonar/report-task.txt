@@ -1,0 +1,5 @@
+projectKey=org.sonarqube:objc-sq-scanner-llvm-coverage
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/org.sonarqube:objc-sq-scanner-llvm-coverage
+ceTaskId=AVrIys1cGMy_cyQoR0VL
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVrIys1cGMy_cyQoR0VL

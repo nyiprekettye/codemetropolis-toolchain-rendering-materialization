@@ -26,30 +26,20 @@ public class XmlProcessing {
 		this.xmlFile = xmlFile;
 	}
 	
-	public boolean xmlProcessingAndBuildingsGeneration(){
+	public boolean xmlProcessingAndBuildingsGeneration() {
 	    try {
-	    	buildings=new ArrayList<Building>();;
+	    	buildings = new ArrayList<Building>();;
 			File fXmlFile = new File(xmlFile);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(fXmlFile);
-
-			doc.getDocumentElement().normalize();
-
-			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
-
-			//NodeList nList = doc.getElementsByTagName("buildable");
-			NodeList nList = doc.getElementsByTagName("size");
-			//nList = doc.getElementsByTagName("size");
-
-			System.out.println("----------------------------");
+			doc.getDocumentElement().normalize();			
+			NodeList nList = doc.getElementsByTagName("buildable");			
 
 			for (int temp = 0; temp < nList.getLength(); temp++) {
 
 				Node nNode = nList.item(temp);
 				
-				//System.out.println("\nCurrent Element :" + nNode.getNodeName());
-
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
 					Element eElement = (Element) nNode;
@@ -65,22 +55,35 @@ public class XmlProcessing {
 					building.setName(eElement.getAttribute("name"));
 					building.setType(eElement.getAttribute("type"));
 					
-					if(nNode.getNodeName() == "size"){
-						
-						building.getSize().setX(Integer.parseInt((eElement.getAttribute("x")))); 
-						building.getSize().setY(Integer.parseInt((eElement.getAttribute("y")))); 
-						building.getSize().setZ(Integer.parseInt((eElement.getAttribute("z")))); 
-					}
-					if(nNode.getNodeName() == "position"){
-						
-						building.getLocation().setX(Integer.parseInt((eElement.getAttribute("x")))); 
-						building.getLocation().setY(Integer.parseInt((eElement.getAttribute("y")))); 
-						building.getLocation().setZ(Integer.parseInt((eElement.getAttribute("z")))); 
+					NodeList nodeList = nNode.getChildNodes();
 					
-					}
-					
+					 switch (nodeList.item(1).getNodeType()) {
+				        case Node.ELEMENT_NODE:
+
+				            Element element = (Element) nodeList.item(1);
+				            if (element.getNodeName().equalsIgnoreCase("position"))
+				            {				               
+				            	building.getLocation().setX(Integer.parseInt((element.getAttribute("x")))); 
+								building.getLocation().setY(Integer.parseInt((element.getAttribute("y")))); 
+								building.getLocation().setZ(Integer.parseInt((element.getAttribute("z")))); 
+				            }
+				    break;
+					 }
+					 
+					 switch (nodeList.item(3).getNodeType()) {
+				        case Node.ELEMENT_NODE:
+
+				            Element element = (Element) nodeList.item(3);				           
+				            if (element.getNodeName().equalsIgnoreCase("size"))
+				            {				               
+				            	building.getSize().setX(Integer.parseInt((element.getAttribute("x")))); 
+								building.getSize().setY(Integer.parseInt((element.getAttribute("y")))); 
+								building.getSize().setZ(Integer.parseInt((element.getAttribute("z"))));  
+				            }
+				    break;
+					 }
+									
 					System.out.println(building.toString());
-					
 					buildings.add(building);
 				
 					}
