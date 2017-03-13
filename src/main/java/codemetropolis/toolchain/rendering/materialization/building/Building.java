@@ -57,6 +57,7 @@ public class Building {
 		this.location = location;
 	}
 	public Size getSize() {
+		
 		return size;
 	}
 	public void setSize(Size size) {

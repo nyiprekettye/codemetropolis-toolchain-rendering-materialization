@@ -28,6 +28,9 @@ public class Controller {
                     Labels.CONTROLLER_SUCCCES_XML_PROCESSING_MESSAGE,
                     Labels.CONTROLLER_SUCCCES_XML_PROCESSING_TITLE,
                     JOptionPane.INFORMATION_MESSAGE);
+        	//ide kell hívni a grafikus megjelenítést
+        	
+        	
             mainGUI.setVisibleTabletGraphicsPanel();
         } else {
         	JOptionPane.showMessageDialog(

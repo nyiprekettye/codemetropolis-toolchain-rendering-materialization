@@ -5,6 +5,7 @@ import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import codemetropolis.toolchain.rendering.materialization.building.Building;
+import codemetropolis.toolchain.rendering.materialization.building.point.Size;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
@@ -72,6 +73,7 @@ public class XmlToJGraph {
 				building.setId(eElement.getAttribute("id"));
 				building.setName(eElement.getAttribute("name"));
 				building.setType(eElement.getAttribute("type"));
+			
 				/*
 				System.out.println("Buildable id : " + building.getId());
 				System.out.println("Buildable name: " + building.getName());

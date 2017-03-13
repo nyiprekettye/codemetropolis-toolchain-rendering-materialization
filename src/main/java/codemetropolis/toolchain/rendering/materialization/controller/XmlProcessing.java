@@ -13,6 +13,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import codemetropolis.toolchain.rendering.materialization.building.Building;
+import codemetropolis.toolchain.rendering.materialization.building.point.Size;
 
 public class XmlProcessing {
 	private List<Building> buildings;
@@ -37,7 +38,9 @@ public class XmlProcessing {
 
 			System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
 
-			NodeList nList = doc.getElementsByTagName("buildable");
+			//NodeList nList = doc.getElementsByTagName("buildable");
+			NodeList nList = doc.getElementsByTagName("size");
+			//nList = doc.getElementsByTagName("size");
 
 			System.out.println("----------------------------");
 
@@ -62,10 +65,26 @@ public class XmlProcessing {
 					building.setName(eElement.getAttribute("name"));
 					building.setType(eElement.getAttribute("type"));
 					
+					if(nNode.getNodeName() == "size"){
+						
+						building.getSize().setX(Integer.parseInt((eElement.getAttribute("x")))); 
+						building.getSize().setY(Integer.parseInt((eElement.getAttribute("y")))); 
+						building.getSize().setZ(Integer.parseInt((eElement.getAttribute("z")))); 
+					}
+					if(nNode.getNodeName() == "position"){
+						
+						building.getLocation().setX(Integer.parseInt((eElement.getAttribute("x")))); 
+						building.getLocation().setY(Integer.parseInt((eElement.getAttribute("y")))); 
+						building.getLocation().setZ(Integer.parseInt((eElement.getAttribute("z")))); 
+					
+					}
+					
 					System.out.println(building.toString());
 					
 					buildings.add(building);
+				
 					}
+				
 				}
 		    } catch (Exception e) {
 		    	System.out.println("SAX Exception: "+e.getMessage());

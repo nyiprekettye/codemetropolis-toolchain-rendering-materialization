@@ -11,7 +11,7 @@ public class Size {
 	}
 	@Override
 	public String toString() {
-		return "Location [x=" + x + ", y=" + y + ", z=" + z + "]";
+		return "Size [x=" + x + ", y=" + y + ", z=" + z + "]";
 	}
 	public int getX() {
 		return x;
