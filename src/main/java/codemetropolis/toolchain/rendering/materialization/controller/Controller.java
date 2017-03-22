@@ -5,10 +5,12 @@ import javax.swing.JOptionPane;
 import codemetropolis.toolchain.rendering.materialization.GUI.MainGUI;
 import codemetropolis.toolchain.rendering.materialization.GUI.XmlToJGraph;
 import codemetropolis.toolchain.rendering.materialization.GUI.view.Labels;
+import codemetropolis.toolchain.rendering.materialization.controller.thread.MainThread;
 
 public class Controller {
 	Controller con;
 	MainGUI mainGUI;
+	XmlProcessing xmlprocessing;
 	
 	public void start(Controller con) {
 		 this.con =con;
@@ -21,7 +23,7 @@ public class Controller {
        // XmlToJGraph b = new XmlToJGraph();
         //b.read(inputXML);
         
-        XmlProcessing xmlprocessing= new XmlProcessing(inputXML);
+        xmlprocessing= new XmlProcessing(inputXML);
         if(xmlprocessing.xmlProcessingAndBuildingsGeneration()) { 
         	JOptionPane.showMessageDialog(
                     mainGUI,
@@ -29,6 +31,7 @@ public class Controller {
                     Labels.CONTROLLER_SUCCCES_XML_PROCESSING_TITLE,
                     JOptionPane.INFORMATION_MESSAGE);
         	//ide kell hívni a grafikus megjelenítést
+        	startThread();
         	
         	
             mainGUI.setVisibleTabletGraphicsPanel();
@@ -43,5 +46,11 @@ public class Controller {
        
         
 	}
+	private void startThread() {
+		// TODO Auto-generated method stub
+		MainThread mainThread = new MainThread(this);
+		mainThread.startGenerate(xmlprocessing.getBuildings());
+	}
+	
 
 }

@@ -16,6 +16,7 @@ import codemetropolis.toolchain.rendering.materialization.building.Building;
 import codemetropolis.toolchain.rendering.materialization.building.point.Size;
 
 public class XmlProcessing {
+
 	private List<Building> buildings;
 	private String xmlFile;
 	
@@ -83,7 +84,7 @@ public class XmlProcessing {
 				    break;
 					 }
 									
-					System.out.println(building.toString());
+					//System.out.println(building.toString());
 					buildings.add(building);
 				
 					}
@@ -96,5 +97,10 @@ public class XmlProcessing {
 		    }		
 		return true;		
 	}
+	
+	public List<Building> getBuildings() {
+		return buildings;
+	}
+
 
 }
