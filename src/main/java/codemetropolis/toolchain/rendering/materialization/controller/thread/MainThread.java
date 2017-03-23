@@ -59,9 +59,9 @@ public class MainThread {
 				e.printStackTrace();
 			}			
 		}		
-		notify();
 		 endFileGenerateThread = true;
 		 endGraphicsTread = true;
+		 notify();
 	}
 
 	private synchronized void setCurrentbuilding(Building building) {
@@ -69,7 +69,7 @@ public class MainThread {
 			try {
 				if (debug)
 				System.out.println("Main: várakoznom kell! graphicsThreadCanReadCurrentIttem: "+graphicsThreadCanReadCurrentIttem+" ;fileGenerateThreadCanReadCurrentIttem: "+fileGenerateThreadCanReadCurrentIttem); 
-				
+				notify();
 				wait();
 			} catch (InterruptedException e) {				
 				e.printStackTrace();
@@ -160,6 +160,10 @@ public class MainThread {
 	public void filegenerateThreadGotCurrentBuilding() {
 		this.fileGenerateThreadCanReadCurrentIttem = false;
 		
+	}
+
+	public Controller getConntroller() {
+		return conntroller;
 	}
 
 

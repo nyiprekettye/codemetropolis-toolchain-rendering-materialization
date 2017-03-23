@@ -11,6 +11,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 
@@ -63,7 +64,6 @@ public class MainGUI extends JFrame {
 		tabbedPane.setEnabledAt(2, false);		
 		return tabbedPane;
 	}	
-
 	
 	private JPanel makeConole(){
 		JPanel p = new JPanel();			
@@ -73,14 +73,26 @@ public class MainGUI extends JFrame {
 		consoleGraphics = new JTextArea(10, 25);
 		consoleGraphics.setEditable(false);
 		consoleGraphics.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		consoleGraphics.setLineWrap(true);
+		consoleGraphics.setWrapStyleWord(true);		
 		
 		consoleFileGenerate = new JTextArea(10, 25);
 		consoleFileGenerate.setEditable(false);	
 		consoleFileGenerate.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		consoleFileGenerate.setLineWrap(true);
+		consoleFileGenerate.setWrapStyleWord(true);
 		
 		p.setLayout(new GridLayout(1, 2));
-		p.add(consoleGraphics);			
-		p.add(consoleFileGenerate);
+		JScrollPane spGraphics = new JScrollPane(consoleGraphics);
+		spGraphics.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		spGraphics.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		
+		JScrollPane spFileGenerate = new JScrollPane(consoleFileGenerate);
+		spFileGenerate.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		spFileGenerate.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		
+		p.add(spGraphics);			
+		p.add(spFileGenerate);
 		//p.add(new JLabel("hello1"));
 		//p.add(new JLabel("hello2"));		
 		
