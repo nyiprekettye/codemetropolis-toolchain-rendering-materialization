@@ -16,16 +16,20 @@ public class FileGenerateThread extends Thread {
 		while(mainThread.isEndFileGenerateThread() == false){
 			if (debug)
 			System.out.println("A file generator: Megpróbálom lekérdezni a következő épületet");
+			if( mainThread.getFileGeneratorBuilding() == true){
+				building = mainThread.getCurrentBuilding();
+				mainThread.filegenerateThreadGotCurrentBuilding();
+				if (debug)
+					System.out.println("A file generator: Feldolgozom a kapott épületet");
+				if (debug)
+					System.out.println("A file generator: A kapott épület: "+ building.toString());
+					
+				if (debug)
+					System.out.println("A file generator: Feldolgoztam az épületet \n\n");
+			}
+		
 			
-			building = mainThread.getFileGeneratorBuilding();
-			
-			if (debug)
-			System.out.println("A file generator: Feldolgozom a kapott épületet");
-			//if (debug)
-			System.out.println("A file generator: A kapott épület: "+ building.toString());
-			
-			if (debug)
-			System.out.println("A file generator: Feldolgoztam az épületet \n\n");
+		
 			
 		}
 		System.out.println("A file generator: I finised my job, i exited!");
