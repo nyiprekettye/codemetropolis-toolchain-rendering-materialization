@@ -2,14 +2,14 @@ package codemetropolis.toolchain.rendering.materialization.GUI;
 
 import java.awt.BorderLayout;
 import java.awt.Button;
-
+import java.awt.Color;
 import java.awt.GridLayout;
 
 import java.awt.Label;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
-
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
@@ -22,7 +22,8 @@ public class MainGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	Controller con;
 	Button startGenerateBtn = new Button(Labels.MainGUI_button_startGenerateBtn);
-	JTextArea console;
+	JTextArea consoleGraphics;
+	JTextArea consoleFileGenerate;
 	JTabbedPane tabbedPane;
 	GraphicsPanel graphicsPanel;
 	
@@ -67,11 +68,22 @@ public class MainGUI extends JFrame {
 	private JPanel makeConole(){
 		JPanel p = new JPanel();			
 		p.setBorder(BorderFactory.createTitledBorder(Labels.MainGUI_JPanel_consolePanel));
-		p.setToolTipText(Labels.MainGUI_JPanel_consolePanel_Tips);			
-		console = new JTextArea(10, 50);
-		console.setEditable(false);			
-		p.setLayout(new GridLayout(1, 1));
-		p.add(console);			
+		p.setToolTipText(Labels.MainGUI_JPanel_consolePanel_Tips);	
+		
+		consoleGraphics = new JTextArea(10, 25);
+		consoleGraphics.setEditable(false);
+		consoleGraphics.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		
+		consoleFileGenerate = new JTextArea(10, 25);
+		consoleFileGenerate.setEditable(false);	
+		consoleFileGenerate.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		
+		p.setLayout(new GridLayout(1, 2));
+		p.add(consoleGraphics);			
+		p.add(consoleFileGenerate);
+		//p.add(new JLabel("hello1"));
+		//p.add(new JLabel("hello2"));		
+		
     	return p;
 	}
 	
@@ -89,6 +101,14 @@ public class MainGUI extends JFrame {
 	public void setVisibleTabletGraphicsPanel() {		
 		tabbedPane.setEnabledAt(1, true);
 		tabbedPane.setSelectedIndex(1);
+	}
+
+	public JTextArea getConsoleGraphics() {
+		return consoleGraphics;
+	}
+
+	public JTextArea getConsoleFileGenerate() {
+		return consoleFileGenerate;
 	}
 
 }

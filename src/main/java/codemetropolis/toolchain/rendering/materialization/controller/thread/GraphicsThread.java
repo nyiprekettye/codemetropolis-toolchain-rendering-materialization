@@ -1,5 +1,7 @@
 package codemetropolis.toolchain.rendering.materialization.controller.thread;
 
+import java.util.concurrent.ForkJoinPool.ManagedBlocker;
+
 import codemetropolis.toolchain.rendering.materialization.building.Building;
 import codemetropolis.toolchain.rendering.materialization.controller.Controller;
 
@@ -13,22 +15,26 @@ public class GraphicsThread extends Thread{
 	}
 	
 	public void run () {
-		while(mainThread.isEndGraphicsTread() == false){
+		int i =0;
+		while(mainThread.isEndGraphicsTread() == false ){		
 			if (debug)
 			System.out.println("A grafikus: Megpróbálom lekérdezni a következő épületet");
 			
-			building = mainThread.getGraphicsBuilding();
+			if( mainThread.getGraphicsBuilding() == true){
+				building = mainThread.getCurrentBuilding();
+				mainThread.graphicsThreadGotCurrentBuilding();
+				if (debug)
+					System.out.println("A grafikus:Main-ben ");
+				if (debug)
+					System.out.println("A grafikus: Feldolgozom a kapott épületet");
+				if (debug)
+					System.out.println("A grafikus: A kapott épület: "+ building.toString());
 			
-			if (debug)
-			System.out.println("A grafikus: Feldolgozom a kapott épületet");
-			//if (debug)
-			System.out.println("A grafikus: A kapott épület: "+ building.toString());
-	
-			if (debug)
-			System.out.println("A grafikus: Feldolgoztam az épületet \n\n");
+				if (debug)
+					System.out.println("A grafikus: Feldolgoztam az épületet \n\n");
+			}
 			
-		}
-		
+		}		
 		
 		System.out.println("A graphics: I finised my job, i exited!");
 	}
