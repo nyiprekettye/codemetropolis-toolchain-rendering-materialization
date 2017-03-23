@@ -13,7 +13,7 @@ public class Labels {
 
 	public static final String MainGUI_tabbetPane_fileTReading = "Fálj keresése";
 
-	public static final String MainGUI_JPanel_consolePanel = "Konzol";
+	public static final String MainGUI_JPanel_consolePanel = "Consoles";
 
 	public static final String MainGUI_JPanel_consolePanel_Tips = "Konzol, a program kimeneti helye";
 

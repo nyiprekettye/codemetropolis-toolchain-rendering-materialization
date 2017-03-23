@@ -26,7 +26,9 @@ public class MainThread {
 		graphicsThread = new GraphicsThread(this);
 		fileGenerateThread =  new FileGenerateThread(this);
 		
-		graphicsThreadWait = true;
+		graphicsThreadCanReadCurrentIttem=false;
+		fileGenerateThreadCanReadCurrentIttem=false;
+		//graphicsThread = true;
 		fileGenerateThreadWait = true;
 	}
 	
@@ -40,72 +42,100 @@ public class MainThread {
 			if (debug)
 			System.out.println("A main:Sikeresen beleraktam az épületet");
 		}
-		 endFileGenerateThread = true;
-		 endGraphicsTread = true;
+		stopBuildingsThreads();
+	
 		 
 	}
 	
+	private synchronized void stopBuildingsThreads() {
+		while (getCanPutBuilding() == false){		
+			try {
+				if (debug)
+				System.out.println("Main: várakoznom kell a leállítással! graphicsThreadCanReadCurrentIttem: "+graphicsThreadCanReadCurrentIttem+" ;fileGenerateThreadCanReadCurrentIttem: "+fileGenerateThreadCanReadCurrentIttem); 
+		
+				notify();
+				wait();
+			} catch (InterruptedException e) {				
+				e.printStackTrace();
+			}			
+		}		
+		notify();
+		 endFileGenerateThread = true;
+		 endGraphicsTread = true;
+	}
+
 	private synchronized void setCurrentbuilding(Building building) {
 		while (getCanPutBuilding() == false){		
 			try {
 				if (debug)
-				System.out.println("Main: várakoznom kell!"); 
+				System.out.println("Main: várakoznom kell! graphicsThreadCanReadCurrentIttem: "+graphicsThreadCanReadCurrentIttem+" ;fileGenerateThreadCanReadCurrentIttem: "+fileGenerateThreadCanReadCurrentIttem); 
+				
 				wait();
 			} catch (InterruptedException e) {				
 				e.printStackTrace();
 			}			
 		}
 		if (debug)
-		System.out.println("graphicsThreadWait: "+graphicsThreadWait+" ;fileGenerateThreadWait: "+fileGenerateThreadWait); 
+		System.out.println("Main: nem kell várakoznom! graphicsThreadCanReadCurrentIttem: "+graphicsThreadCanReadCurrentIttem+" ;fileGenerateThreadCanReadCurrentIttem: "+fileGenerateThreadCanReadCurrentIttem); 
 		currentBuilding = building;
-		graphicsThreadWait = false;
-		fileGenerateThreadWait = false;
+		fileGenerateThreadCanReadCurrentIttem= true;
+		graphicsThreadCanReadCurrentIttem=true;
+		
+		
 		
 		notify();
 	}	
+	public boolean canGetBuilding() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
-	public synchronized Building getGraphicsBuilding() {
-		while (graphicsThreadWait == true){
+	public synchronized boolean getGraphicsBuilding() {
+		if (graphicsThreadCanReadCurrentIttem == true){
+			if (debug)
+				System.out.println("grafikus: Nem kell várakoznom! " );
+			notify();
+			return true;
+		}else{			
 			try {
 				if (debug)
 				System.out.println("grafikus: várakoznom kell!"); 
+				notify();
 				wait();
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			notify();
+			return false;
 		}
-		if (debug)
-		System.out.println("grafikus: Nem kell várakoznom mert: "+graphicsThreadWait ); 
-		graphicsThreadWait = true;
-		if (debug)
-		System.out.println("grafikus: A grafikus száll megkapta az épületet");
-		notify();
-		return currentBuilding;		
+		
 	}
 
-	public synchronized Building getFileGeneratorBuilding() {
-		while (fileGenerateThreadWait == true){
+	public synchronized boolean getFileGeneratorBuilding() {
+		if (fileGenerateThreadCanReadCurrentIttem == true){
+			if (debug)
+				System.out.println("File generator: Nem kell várakoznom! " );
+			notify();
+			return true;
+		}else{			
 			try {
 				if (debug)
-				System.out.println("file generator: várakoznom kell!"); 
+				System.out.println("File generator: várakoznom kell!"); 
+				notify();
 				wait();
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}	
-		if (debug)
-		System.out.println("file generator: Nem kell várakoznom mert: "+fileGenerateThreadWait ); 		
-		fileGenerateThreadWait = true;
-		if (debug)
-		System.out.println("file generator: A file generator száll megkapta az épületet");
-		notify();
-		return currentBuilding;	
+			notify();
+			return false;
+		}
+			
 	}
 
 	private boolean getCanPutBuilding() {
-		if (this.graphicsThreadWait == true && this.fileGenerateThreadWait == true){	
+		if (this.graphicsThreadCanReadCurrentIttem == false && this.fileGenerateThreadCanReadCurrentIttem == false){	
 			return true;
 		}
 		return false;
@@ -118,6 +148,20 @@ public class MainThread {
 	public boolean isEndFileGenerateThread() {
 		return endFileGenerateThread;
 	}
+
+	public Building getCurrentBuilding() {
+		return currentBuilding;
+	}
+
+	public void graphicsThreadGotCurrentBuilding() {
+		this.graphicsThreadCanReadCurrentIttem = false;
+		
+	}
+	public void filegenerateThreadGotCurrentBuilding() {
+		this.fileGenerateThreadCanReadCurrentIttem = false;
+		
+	}
+
 
 
 

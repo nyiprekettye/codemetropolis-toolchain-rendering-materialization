@@ -51,6 +51,9 @@ public class Controller {
 		MainThread mainThread = new MainThread(this);
 		mainThread.startGenerate(xmlprocessing.getBuildings());
 	}
+	public MainGUI getMainGUI() {
+		return mainGUI;
+	}
 	
 
 }
