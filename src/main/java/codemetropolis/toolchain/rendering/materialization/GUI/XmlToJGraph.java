@@ -5,7 +5,6 @@ import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import codemetropolis.toolchain.rendering.materialization.building.Building;
-import codemetropolis.toolchain.rendering.materialization.building.point.Size;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;

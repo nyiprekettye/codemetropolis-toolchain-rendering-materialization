@@ -3,7 +3,6 @@ package codemetropolis.toolchain.rendering.materialization.controller.thread;
 import javax.swing.JTextArea;
 
 import codemetropolis.toolchain.rendering.materialization.building.Building;
-import codemetropolis.toolchain.rendering.materialization.controller.Controller;
 import codemetropolis.toolchain.rendering.materialization.controller.fileGenerate.GenerateScadFile;
 
 public class FileGenerateThread extends Thread {

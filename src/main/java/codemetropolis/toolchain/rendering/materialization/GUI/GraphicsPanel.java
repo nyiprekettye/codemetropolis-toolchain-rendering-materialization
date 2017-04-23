@@ -2,7 +2,6 @@ package codemetropolis.toolchain.rendering.materialization.GUI;
 
 
 import java.awt.Dimension;
-import java.awt.Label;
 
 import javax.swing.JPanel;
 
@@ -10,8 +9,6 @@ import javax.swing.JPanel;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.view.mxGraph;
 
-import codemetropolis.toolchain.rendering.materialization.building.Building;
-import codemetropolis.toolchain.rendering.materialization.controller.XmlProcessing;
 
 public class GraphicsPanel extends JPanel{
 
@@ -21,7 +18,7 @@ public class GraphicsPanel extends JPanel{
 	private mxGraphComponent graphComponent;
 	
 	public GraphicsPanel(MainGUI mainGUI) {
-		this.mainGUI = mainGUI;
+		this.setMainGUI(mainGUI);
 		//add(new Label("Grafikus felület"));
 		initGUI();
 		
@@ -49,6 +46,14 @@ public class GraphicsPanel extends JPanel{
 		
 		graph.getModel().endUpdate();
 		setVisible(true);
+	}
+
+	public MainGUI getMainGUI() {
+		return mainGUI;
+	}
+
+	public void setMainGUI(MainGUI mainGUI) {
+		this.mainGUI = mainGUI;
 	}
 	
 

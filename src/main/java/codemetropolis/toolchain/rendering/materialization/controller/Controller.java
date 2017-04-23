@@ -3,7 +3,6 @@ package codemetropolis.toolchain.rendering.materialization.controller;
 import javax.swing.JOptionPane;
 
 import codemetropolis.toolchain.rendering.materialization.GUI.MainGUI;
-import codemetropolis.toolchain.rendering.materialization.GUI.XmlToJGraph;
 import codemetropolis.toolchain.rendering.materialization.GUI.view.Labels;
 import codemetropolis.toolchain.rendering.materialization.controller.thread.MainThread;
 

@@ -13,7 +13,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import codemetropolis.toolchain.rendering.materialization.building.Building;
-import codemetropolis.toolchain.rendering.materialization.building.point.Size;
 
 public class XmlProcessing {
 

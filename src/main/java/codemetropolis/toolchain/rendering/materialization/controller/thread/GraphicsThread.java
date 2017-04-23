@@ -1,9 +1,8 @@
 package codemetropolis.toolchain.rendering.materialization.controller.thread;
 
-import java.util.concurrent.ForkJoinPool.ManagedBlocker;
 
 import codemetropolis.toolchain.rendering.materialization.building.Building;
-import codemetropolis.toolchain.rendering.materialization.controller.Controller;
+
 
 public class GraphicsThread extends Thread{
 	MainThread mainThread;
@@ -15,7 +14,6 @@ public class GraphicsThread extends Thread{
 	}
 	
 	public void run () {
-		int i =0;
 		while(mainThread.isEndGraphicsTread() == false ){		
 			if (debug)
 			System.out.println("A grafikus: Megpróbálom lekérdezni a következő épületet");
