@@ -2,6 +2,7 @@ package codemetropolis.toolchain.rendering.materialization.GUI;
 
 
 import java.awt.Dimension;
+import java.awt.DisplayMode;
 
 import javax.swing.JPanel;
 
@@ -10,7 +11,7 @@ import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.view.mxGraph;
 
 
-public class GraphicsPanel extends JPanel{
+public class GraphicsPanel extends JPanel {
 
 	private static final long serialVersionUID = -4771614720014150163L;
 	private MainGUI mainGUI;
