@@ -2,7 +2,7 @@ package codemetropolis.toolchain.rendering.materialization.GUI;
 
 
 import java.awt.Dimension;
-import java.awt.DisplayMode;
+//import java.awt.DisplayMode;
 
 import javax.swing.JPanel;
 

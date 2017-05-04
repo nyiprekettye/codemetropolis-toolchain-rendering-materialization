@@ -1,18 +1,18 @@
 package codemetropolis.toolchain.rendering.materialization.lwjgl;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.IntBuffer;
+//import java.nio.ByteBuffer;
+//import java.nio.ByteOrder;
+//import java.nio.IntBuffer;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;
-import org.lwjgl.input.Mouse;
+//import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.util.glu.GLU;
+//import org.lwjgl.util.glu.GLU;
 
 import codemetropolis.toolchain.rendering.materialization.building.Building;
 
@@ -32,7 +32,7 @@ public class LwjglMain3d{
 	
 	}
 	public LwjglMain3d(List<Building> buildings){
-		this.buildings=buildings;
+		LwjglMain3d.buildings=buildings;
 		initDisplay();
 		
 		gameLoop();
@@ -42,7 +42,7 @@ public class LwjglMain3d{
 	public static void gameLoop()
 	{
 		Camera cam = new Camera(70,(float)Display.getWidth()/(float)Display.getHeight(),0.3f,1000);
-		float x = 0;
+		//float x = 0;
 		
 		
 		
@@ -60,7 +60,7 @@ public class LwjglMain3d{
 			render();
 			
 			
-			x += 0.1f;
+			//x += 0.1f;
 			Display.update();
 			Display.sync(60);
 			 /*if(Mouse.isButtonDown(0))
@@ -133,7 +133,7 @@ public class LwjglMain3d{
 			
 			}	*/
 			
-			int i = 0;
+			//int i = 0;
 			for (Building building : buildings) {
 				
 					cube.getColorCube(
@@ -144,7 +144,7 @@ public class LwjglMain3d{
 						,building.getLocation().getY()-90
 						,building.getLocation().getZ()-180
 						);  
-				i++;
+				//i++;
 			}
 			
 		}
@@ -222,67 +222,4 @@ public class LwjglMain3d{
 		}
 	}
 	
-	private static void select(int x, int y ){
-	            // The selection buffer
-	            IntBuffer selBuffer = ByteBuffer.allocateDirect(1024).order(ByteOrder.nativeOrder()).asIntBuffer();
-	            int buffer[] = new int[256];           
-
-	            IntBuffer vpBuffer = ByteBuffer.allocateDirect(64).order(ByteOrder.nativeOrder()).asIntBuffer();
-	            // The size of the viewport. [0] Is <x>, [1] Is <y>, [2] Is <width>, [3] Is <height>
-	                int[] viewport = new int[4];           
-
-	            // The number of "hits" (objects within the pick area).
-	            int hits;
-	            // Get the viewport info
-	                GL11.glGetInteger(GL11.GL_VIEWPORT, vpBuffer);
-	                vpBuffer.get(viewport);           
-
-	            // Set the buffer that OpenGL uses for selection to our buffer
-	            GL11.glSelectBuffer(selBuffer);          
-
-	            // Change to selection mode
-	            GL11.glRenderMode(GL11.GL_SELECT);          
-
-	            // Initialize the name stack (used for identifying which object was selected)
-	            GL11.glInitNames();
-	            GL11.glPushName(0);
-	           
-
-	            GL11.glMatrixMode(GL11.GL_PROJECTION);
-	            GL11.glPushMatrix();
-	            GL11.glLoadIdentity();           
-
-	            /*  create 5x5 pixel picking region near cursor location */
-	            GLU.gluPickMatrix( (float) x, (float) y, 5.0f, 5.0f,IntBuffer.wrap(viewport));           
-
-	            GLU.gluPerspective(70,(float)Display.getWidth()/(float)Display.getHeight(),0.3f,1000);
-	            render();
-	            GL11.glPopMatrix();
-	            // Exit selection mode and return to render mode, returns number selected
-
-	            hits = GL11.glRenderMode(GL11.GL_RENDER);
-	            System.out.println("hits: " + hits);           
-
-	            selBuffer.get(buffer);
-	                // Objects Were Drawn Where The Mouse Was
-	                if (hits > 0) {
-	                      // If There Were More Than 0 Hits
-	                      int choose = buffer[3]; // Make Our Selection The First Object
-	                      int depth = buffer[1]; // Store How Far Away It Is
-	                      //System.out.println("mélység: " + buffer[1]);
-	                      for (int i = 1; i < hits; i++) {
-	                            // Loop Through All The Detected Hits
-	                            // If This Object Is Closer To Us Than The One We Have Selected
-	                            if (buffer[i * 4 + 1] <  depth) {
-	                                  choose = buffer[i * 4 + 3]; // Select The Closer Object
-	                                  depth = buffer[i * 4 + 1]; // Store How Far Away It Is
-	                            }
-	                      }
-	                      if (depth <-177724416){
-	                    	  System.out.println("Chosen: " + choose + " mélysége: "+depth);
-	                      }else{
-	                    	  System.out.println("öcsém ezt bebuktad, túl messze van");
-	                      }
-	                }
-	    } 
 }
