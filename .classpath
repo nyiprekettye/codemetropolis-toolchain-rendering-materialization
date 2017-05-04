@@ -24,6 +24,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/jgraphx.jar"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="lib/opengl.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl/lwjgl.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl/jar/AppleJavaExtensions.jar"/>
@@ -40,5 +41,8 @@
 	<classpathentry kind="lib" path="lib/lwjgl/jar/lzma.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl/jar/substance-7.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/lwjgl/jar/trident-7.2.1.jar"/>
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+>>>>>>> origin/GraphicsViewer
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
