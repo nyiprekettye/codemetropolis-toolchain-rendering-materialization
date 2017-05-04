@@ -19,8 +19,8 @@ public class Controller {
 	public void generateFromFile(String inputXML) {
 		System.out.println("Ezt a fáljt kaptam: " + inputXML);
 		   // Feri Graph tesztje. Egyenlore konsolra irja ki az xml adatait. 
-       // XmlToJGraph b = new XmlToJGraph();
-        //b.read(inputXML);
+        //XmlToJGraph b = new XmlToJGraph();
+       // b.read(inputXML);
         
         xmlprocessing= new XmlProcessing(inputXML);
         if(xmlprocessing.xmlProcessingAndBuildingsGeneration()) { 
@@ -47,8 +47,8 @@ public class Controller {
 	}
 	private void startThread() {
 		// TODO Auto-generated method stub
-		MainThread mainThread = new MainThread(this);
-		mainThread.startGenerate(xmlprocessing.getBuildings());
+		MainThread mainThread = new MainThread(this, xmlprocessing.getBuildings());
+		mainThread.startGenerate();
 	}
 	public MainGUI getMainGUI() {
 		return mainGUI;

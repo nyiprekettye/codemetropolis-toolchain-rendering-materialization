@@ -1,5 +1,7 @@
 package codemetropolis.toolchain.rendering.materialization.controller.thread;
 
+import java.util.List;
+
 import javax.swing.JTextArea;
 
 import codemetropolis.toolchain.rendering.materialization.building.Building;
@@ -7,56 +9,47 @@ import codemetropolis.toolchain.rendering.materialization.controller.fileGenerat
 
 public class FileGenerateThread extends Thread {
 
-	MainThread mainThread;
-	Building building;
+	MainThread mainThread;	
 	Building buildingContainer;
 	JTextArea console ;
-	String whereToPrint="ownConsole";
+	int whereToPrint= 1;
+	
+	List<Building> buildings;
+	
 	boolean debug = true;
 	boolean resetPosition = true;
 	boolean resetUnderGround = true;
 	GenerateScadFile generateScadFile;
 	
 	
-	public FileGenerateThread(MainThread mainThread) {
+	public FileGenerateThread(MainThread mainThread,List<Building> buildings) {
 		this.mainThread = mainThread;
+		this.buildings = buildings;
 		console = mainThread.getConntroller().getMainGUI().getConsoleFileGenerate();
 		generateScadFile= new GenerateScadFile(this);
 	}
 
 	public void run () {
 		generateScadFile.initFileWriter();
-		while(mainThread.isEndFileGenerateThread() == false){
-				
-				printDebug("A file generator: Megpróbálom lekérdezni a következő épületet");
-				
-			if( mainThread.getFileGeneratorBuilding() == true){
-				building = mainThread.getCurrentBuilding();
-				mainThread.filegenerateThreadGotCurrentBuilding();
-				
-				if (building.getParent_id() == null ){					
-					buildingContainer = building;					
-				}		
-				generateScadFile.printBuilding(building,buildingContainer,resetPosition,resetUnderGround);
-				
-				
-				printDebug("A file generator: Feldolgozom a kapott épületet");
-					
-				printDebug("A file generator: A kapott épület: "+ building.toString());
-				printDebug("A file generator: Feldolgoztam az épületet \n\n");
-					
-			}
-				
-			
+	
+		
+		for (Building building : buildings) {
+			printDebug("\nA file generator: Megpróbálom lekérdezni a következő épületet");
+			if (building.getParent_id() == null ){					
+				buildingContainer = building;					
+			}		
+			generateScadFile.printBuilding(building,buildingContainer,resetPosition,resetUnderGround);
+			printDebug("A file generator: Feldolgozom a kapott épületet");
 		}
-		printDebug("A file generator: I finised my job, i exited!");
+		
+		
 		
 		generateScadFile.closeFileWriter();
 	}
 
 	private void printDebug(String string) {
 		if (debug){
-			if (whereToPrint == "ownConsole"){
+			if (whereToPrint == 1){
 				console.append(string +"\n");
 				console.setCaretPosition(console.getDocument().getLength());
 			}else{
